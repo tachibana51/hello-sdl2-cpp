@@ -1,0 +1,52 @@
+[
+{
+  "directory": "/home/akane/work/sdltest/build",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/akane/work/sdltest/src -std=gnu++20 -o CMakeFiles/PointCloudApp.dir/src/main.cpp.o -c /home/akane/work/sdltest/src/main.cpp",
+  "file": "/home/akane/work/sdltest/src/main.cpp"
+},
+{
+  "directory": "/home/akane/work/sdltest/build",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/akane/work/sdltest/src -std=gnu++20 -o CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.o -c /home/akane/work/sdltest/src/generatePointCloud.cpp",
+  "file": "/home/akane/work/sdltest/src/generatePointCloud.cpp"
+},
+{
+  "directory": "/home/akane/work/sdltest/build",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/akane/work/sdltest/src -std=gnu++20 -o CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.o -c /home/akane/work/sdltest/src/updatePositions.cpp",
+  "file": "/home/akane/work/sdltest/src/updatePositions.cpp"
+},
+{
+  "directory": "/home/akane/work/sdltest/build",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/akane/work/sdltest/src -std=gnu++20 -o CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.o -c /home/akane/work/sdltest/src/drawPointCloud.cpp",
+  "file": "/home/akane/work/sdltest/src/drawPointCloud.cpp"
+},
+{
+  "directory": "/home/akane/work/sdltest/build",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/akane/work/sdltest/src -std=gnu++20 -o CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.o -c /home/akane/work/sdltest/src/switchCoordinateSystem.cpp",
+  "file": "/home/akane/work/sdltest/src/switchCoordinateSystem.cpp"
+},
+{
+  "directory": "/home/akane/work/sdltest/build",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/akane/work/sdltest/src -std=gnu++20 -o CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.o -c /home/akane/work/sdltest/src/morphTransition.cpp",
+  "file": "/home/akane/work/sdltest/src/morphTransition.cpp"
+},
+{
+  "directory": "/home/akane/work/sdltest/build",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/akane/work/sdltest/src -std=gnu++20 -o CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.o -c /home/akane/work/sdltest/src/handleCameraMovement.cpp",
+  "file": "/home/akane/work/sdltest/src/handleCameraMovement.cpp"
+},
+{
+  "directory": "/home/akane/work/sdltest/build",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/akane/work/sdltest/src -std=gnu++20 -o CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.o -c /home/akane/work/sdltest/src/renderScene.cpp",
+  "file": "/home/akane/work/sdltest/src/renderScene.cpp"
+},
+{
+  "directory": "/home/akane/work/sdltest/build",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/akane/work/sdltest/src -std=gnu++20 -o CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.o -c /home/akane/work/sdltest/src/onButtonPress.cpp",
+  "file": "/home/akane/work/sdltest/src/onButtonPress.cpp"
+},
+{
+  "directory": "/home/akane/work/sdltest/build",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/home/akane/work/sdltest/src -std=gnu++20 -o CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.o -c /home/akane/work/sdltest/src/onMouseMovement.cpp",
+  "file": "/home/akane/work/sdltest/src/onMouseMovement.cpp"
+}
+]
