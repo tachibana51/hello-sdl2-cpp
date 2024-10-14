@@ -517,6 +517,11 @@ CMakeFiles/PointCloudApp.dir/src/main.cpp.o: \
  /home/akane/work/sdltest/src/Systems/../Components/ProjectionComponent.h \
  /home/akane/work/sdltest/src/Systems/MorphingSystem.h \
  /home/akane/work/sdltest/src/Components/FunctionComponent.h \
+ /home/akane/work/sdltest/src/Components/WaveletComponent.h \
  /home/akane/work/sdltest/src/GUI/GUIManager.h \
  /home/akane/work/sdltest/src/GUI/GUIElement.h \
- /home/akane/work/sdltest/src/GUI/Button.h
+ /home/akane/work/sdltest/src/GUI/Button.h \
+ /home/akane/work/sdltest/src/Systems/AudioSystem.h \
+ /home/akane/work/sdltest/src/Systems/../Components/AudioComponent.h \
+ /usr/include/sndfile.h \
+ /home/akane/work/sdltest/src/Systems/WaveletSystem.h

@@ -24,6 +24,7 @@ else()
     message(FATAL_ERROR "Could not find GLM library.")
 endif()
 
+pkg_check_modules(sndfile REQUIRED IMPORTED_TARGET sndfile)
 # ヘッダーファイルのディレクトリ
 include_directories(src)
 
@@ -36,6 +37,8 @@ set(SOURCES
     src/Components/FunctionComponent.h
     src/Components/CameraComponent.h
     src/Components/ProjectionComponent.h
+    src/Components/AudioComponent.h
+    src/Components/WaveletComponent.h
 )
 
 # Engine/ECS/*.cpp を追加
@@ -59,7 +62,8 @@ set(SYSTEMS_SOURCES
     src/Systems/RenderSystem.cpp
     src/Systems/MorphingSystem.cpp
     src/Systems/CameraSystem.cpp
-    # 他のシステムがあればここに追加
+    src/Systems/AudioSystem.h
+    src/Systems/WaveletSystem.h
 )
 
 # GUI/*.cpp を追加
@@ -82,4 +86,4 @@ set(SOURCES
 add_executable(PointCloudApp ${SOURCES})
 
 # ライブラリのリンク
-target_link_libraries(PointCloudApp ${SDL2_LIBRARIES} ${SDL2TTF_LIBRARIES})
+target_link_libraries(PointCloudApp ${SDL2_LIBRARIES} ${SDL2TTF_LIBRARIES} sndfile)

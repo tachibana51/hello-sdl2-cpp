@@ -236,11 +236,17 @@ SDL2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2
 //The directory containing a CMake configuration file for SDL2_ttf.
 SDL2_ttf_DIR:PATH=SDL2_ttf_DIR-NOTFOUND
 
+//The directory containing a CMake configuration file for SndFile.
+SndFile_DIR:PATH=SndFile_DIR-NOTFOUND
+
 //Path to a library.
 pkgcfg_lib_SDL2TTF_SDL2:FILEPATH=/usr/lib/x86_64-linux-gnu/libSDL2.so
 
 //Path to a library.
 pkgcfg_lib_SDL2TTF_SDL2_ttf:FILEPATH=/usr/lib/x86_64-linux-gnu/libSDL2_ttf.so
+
+//Path to a library.
+pkgcfg_lib_sndfile_sndfile:FILEPATH=/usr/lib/x86_64-linux-gnu/libsndfile.so
 
 
 ########################
@@ -433,12 +439,77 @@ SDL2TTF_STATIC_LIBS_L:INTERNAL=
 SDL2TTF_STATIC_LIBS_OTHER:INTERNAL=
 SDL2TTF_STATIC_LIBS_PATHS:INTERNAL=
 SDL2TTF_VERSION:INTERNAL=2.0.18
+SndFile_CFLAGS:INTERNAL=
+SndFile_CFLAGS_I:INTERNAL=
+SndFile_CFLAGS_OTHER:INTERNAL=
+SndFile_FOUND:INTERNAL=
+SndFile_INCLUDEDIR:INTERNAL=
+SndFile_LIBDIR:INTERNAL=
+SndFile_LIBS:INTERNAL=
+SndFile_LIBS_L:INTERNAL=
+SndFile_LIBS_OTHER:INTERNAL=
+SndFile_LIBS_PATHS:INTERNAL=
+SndFile_MODULE_NAME:INTERNAL=
+SndFile_PREFIX:INTERNAL=
+SndFile_STATIC_CFLAGS:INTERNAL=
+SndFile_STATIC_CFLAGS_I:INTERNAL=
+SndFile_STATIC_CFLAGS_OTHER:INTERNAL=
+SndFile_STATIC_LIBDIR:INTERNAL=
+SndFile_STATIC_LIBS:INTERNAL=
+SndFile_STATIC_LIBS_L:INTERNAL=
+SndFile_STATIC_LIBS_OTHER:INTERNAL=
+SndFile_STATIC_LIBS_PATHS:INTERNAL=
+SndFile_SndFile_INCLUDEDIR:INTERNAL=
+SndFile_SndFile_LIBDIR:INTERNAL=
+SndFile_SndFile_PREFIX:INTERNAL=
+SndFile_SndFile_VERSION:INTERNAL=
+SndFile_VERSION:INTERNAL=
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+__pkg_config_arguments_sndfile:INTERNAL=REQUIRED;IMPORTED_TARGET;sndfile
 __pkg_config_checked_SDL2TTF:INTERNAL=1
+__pkg_config_checked_SndFile:INTERNAL=1
+__pkg_config_checked_sndfile:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_SDL2TTF_SDL2
 pkgcfg_lib_SDL2TTF_SDL2-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_SDL2TTF_SDL2_ttf
 pkgcfg_lib_SDL2TTF_SDL2_ttf-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_sndfile_sndfile
+pkgcfg_lib_sndfile_sndfile-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
+sndfile_CFLAGS:INTERNAL=-I/usr/include/opus
+sndfile_CFLAGS_I:INTERNAL=
+sndfile_CFLAGS_OTHER:INTERNAL=
+sndfile_FOUND:INTERNAL=1
+sndfile_INCLUDEDIR:INTERNAL=/usr/include
+sndfile_INCLUDE_DIRS:INTERNAL=/usr/include/opus
+sndfile_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lsndfile
+sndfile_LDFLAGS_OTHER:INTERNAL=
+sndfile_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+sndfile_LIBRARIES:INTERNAL=sndfile
+sndfile_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+sndfile_LIBS:INTERNAL=
+sndfile_LIBS_L:INTERNAL=
+sndfile_LIBS_OTHER:INTERNAL=
+sndfile_LIBS_PATHS:INTERNAL=
+sndfile_MODULE_NAME:INTERNAL=sndfile
+sndfile_PREFIX:INTERNAL=/usr
+sndfile_STATIC_CFLAGS:INTERNAL=-I/usr/include/opus
+sndfile_STATIC_CFLAGS_I:INTERNAL=
+sndfile_STATIC_CFLAGS_OTHER:INTERNAL=
+sndfile_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/opus
+sndfile_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lsndfile;-lFLAC;-lm;-lvorbisenc;-lvorbis;-lm;-logg;-lopus;-lm
+sndfile_STATIC_LDFLAGS_OTHER:INTERNAL=
+sndfile_STATIC_LIBDIR:INTERNAL=
+sndfile_STATIC_LIBRARIES:INTERNAL=sndfile;FLAC;m;vorbisenc;vorbis;m;ogg;opus;m
+sndfile_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+sndfile_STATIC_LIBS:INTERNAL=
+sndfile_STATIC_LIBS_L:INTERNAL=
+sndfile_STATIC_LIBS_OTHER:INTERNAL=
+sndfile_STATIC_LIBS_PATHS:INTERNAL=
+sndfile_VERSION:INTERNAL=1.0.31
+sndfile_sndfile_INCLUDEDIR:INTERNAL=
+sndfile_sndfile_LIBDIR:INTERNAL=
+sndfile_sndfile_PREFIX:INTERNAL=
+sndfile_sndfile_VERSION:INTERNAL=
 

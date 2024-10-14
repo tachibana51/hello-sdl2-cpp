@@ -10,15 +10,18 @@
 #include "Systems/MovementSystem.h"
 #include "Systems/RenderSystem.h"
 #include "Systems/MorphingSystem.h"
-#include "Systems/CameraSystem.h"   // CameraSystem のインクルード
+#include "Systems/CameraSystem.h"
 #include "Components/PositionComponent.h"
 #include "Components/VelocityComponent.h"
 #include "Components/FunctionComponent.h"
 #include "Components/MorphingComponent.h"
-#include "Components/CameraComponent.h"      // CameraComponent のインクルード
-#include "Components/ProjectionComponent.h"  // ProjectionComponent のインクルード
+#include "Components/CameraComponent.h"
+#include "Components/ProjectionComponent.h"
+#include "Components/WaveletComponent.h"
 #include "GUI/GUIManager.h"
 #include "GUI/Button.h"
+#include "Systems/AudioSystem.h"
+#include "Systems/WaveletSystem.h"
 
 // 座標系の種類を定義
 enum class CoordinateSystemType {
@@ -208,6 +211,8 @@ int main(int argc, char* argv[]) {
     coordinator.registerComponent<MorphingComponent>();    // MorphingComponent の登録
     coordinator.registerComponent<CameraComponent>();      // CameraComponent の登録
     coordinator.registerComponent<ProjectionComponent>();  // ProjectionComponent の登録
+    coordinator.registerComponent<AudioComponent>();
+    coordinator.registerComponent<WaveletComponent>();
 
     // システムの登録
     auto movementSystem = coordinator.registerSystem<MovementSystem>();
@@ -258,6 +263,23 @@ int main(int argc, char* argv[]) {
         cameraSystem->setCoordinator(&coordinator);
         coordinator.setSystemSignature<CameraSystem>(signature);
     }
+    // AudioSystem の登録
+    auto audioSystem = coordinator.registerSystem<AudioSystem>();
+    {
+        ECS::Signature signature;
+        signature.set(coordinator.getComponentType<AudioComponent>(), true);
+        audioSystem->setCoordinator(&coordinator);
+        coordinator.setSystemSignature<AudioSystem>(signature);
+    }
+    // WaveletSystem の登録
+    auto waveletSystem = coordinator.registerSystem<WaveletSystem>();
+    {
+        ECS::Signature signature;
+        signature.set(coordinator.getComponentType<WaveletComponent>(), true);
+        waveletSystem->setCoordinator(&coordinator);
+        coordinator.setSystemSignature<WaveletSystem>(signature);
+    }
+
 
     // カメラの初期設定
     ECS::Entity cameraEntity = coordinator.createEntity();
@@ -298,6 +320,36 @@ int main(int argc, char* argv[]) {
     guiManager.addElement(new Button("Assign Velocities", 280, 10, 150, 30, []() {
         assignRandomVelocities();
     }));
+
+    guiManager.addElement(new Button("Load Audio", 440, 10, 120, 30, [audioSystem]() {
+        // ファイル選択ダイアログを開く（簡易的に固定パスを使用）
+        std::string audioPath = "assets/audio/in.wav"; // 実際にはファイル選択ダイアログを実装することを推奨
+        ECS::Entity audioEntity = coordinator.createEntity();
+        if (audioSystem->loadAudioFile(audioPath, audioEntity)) {
+            SDL_Log("Audio file loaded and assigned to entity %d.", audioEntity);
+        }
+    }));
+    // ボタンの追加
+    guiManager.addElement(new Button("Wavelet Transform", 440, 50, 150, 30, [waveletSystem]() {
+        // 音声エンティティを取得（ここでは単一エンティティと仮定）
+        // 複数エンティティに対応する場合はループを使用
+        for (ECS::Entity entity = 0; entity < ECS::MAX_ENTITIES; ++entity) {
+            if (coordinator.hasComponent<AudioComponent>(entity)) {
+                waveletSystem->performWaveletTransform(entity);
+            }
+        }
+    }));
+
+    guiManager.addElement(new Button("Inverse Wavelet", 600, 50, 150, 30, [waveletSystem]() {
+        // ウェーブレット変換されたエンティティを取得
+        for (ECS::Entity entity = 0; entity < ECS::MAX_ENTITIES; ++entity) {
+            if (coordinator.hasComponent<WaveletComponent>(entity)) {
+                waveletSystem->performInverseWaveletTransform(entity);
+            }
+        }
+    }));
+
+
     // メインループ
     bool running = true;
     SDL_Event event;
