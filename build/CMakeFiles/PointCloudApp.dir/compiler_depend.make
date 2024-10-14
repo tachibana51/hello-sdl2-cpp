@@ -2904,7 +2904,9 @@ CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.o: /home/akane/work/sd
   /usr/include/SDL2/SDL_timer.h \
   /usr/include/SDL2/SDL_version.h \
   /usr/include/SDL2/SDL_locale.h \
-  /usr/include/SDL2/SDL_misc.h
+  /usr/include/SDL2/SDL_misc.h \
+  /usr/include/SDL2/SDL_ttf.h \
+  /usr/include/SDL2/SDL.h
 
 CMakeFiles/PointCloudApp.dir/src/main.cpp.o: /home/akane/work/sdltest/src/main.cpp \
   /usr/include/stdc-predef.h \
@@ -3503,16 +3505,15 @@ CMakeFiles/PointCloudApp.dir/src/main.cpp.o: /home/akane/work/sdltest/src/main.c
   /home/akane/work/sdltest/src/Engine/Events/EventManager.h \
   /home/akane/work/sdltest/src/Engine/Events/Event.h \
   /home/akane/work/sdltest/src/Systems/MovementSystem.h \
-  /usr/include/SDL2/SDL_log.h \
   /home/akane/work/sdltest/src/Components/PositionComponent.h \
   /home/akane/work/sdltest/src/Components/VelocityComponent.h \
-  /home/akane/work/sdltest/src/Components/FunctionComponent.h \
-  /home/akane/work/sdltest/src/Components/MorphingComponent.h \
   /home/akane/work/sdltest/src/Systems/RenderSystem.h \
+  /home/akane/work/sdltest/src/Components/MorphingComponent.h \
   /home/akane/work/sdltest/src/Systems/CameraSystem.h \
   /home/akane/work/sdltest/src/Components/CameraComponent.h \
   /home/akane/work/sdltest/src/Components/ProjectionComponent.h \
   /home/akane/work/sdltest/src/Systems/MorphingSystem.h \
+  /home/akane/work/sdltest/src/Components/FunctionComponent.h \
   /home/akane/work/sdltest/src/GUI/GUIManager.h \
   /home/akane/work/sdltest/src/GUI/GUIElement.h \
   /home/akane/work/sdltest/src/GUI/Button.h
