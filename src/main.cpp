@@ -284,15 +284,33 @@ int main(int argc, char* argv[]) {
     }
 
 
-    // WaveletVisualizationSystem の登録と使用
+
+
+    // WaveletVisualizationSystem の登録
     auto waveletVisSystem = coordinator.registerSystem<WaveletVisualizationSystem>();
     {
         ECS::Signature signature;
         signature.set(coordinator.getComponentType<WaveletVisualizationComponent>(), true);
         waveletVisSystem->setCoordinator(&coordinator);
+        waveletVisSystem->setRenderer(renderer);
+        waveletVisSystem->setWindowSize(windowWidth, windowHeight);
+        waveletVisSystem->setCameraSystem(cameraSystem.get());
+
+        // フォントのロード（RenderSystemと共有する場合は省略可）
+        std::string fontPath = "JetBrainsMonoNL-Regular.ttf"; // フォントファイルのパスを指定
+        int fontSize = 12; // フォントサイズを指定
+        if (!waveletVisSystem->loadFont(fontPath, fontSize)) {
+            SDL_Log("Failed to load font for WaveletVisualizationSystem. Exiting.");
+            SDL_DestroyRenderer(renderer);
+            SDL_DestroyWindow(window);
+            TTF_Quit();
+            SDL_Quit();
+            return -1;
+        }
+
         coordinator.setSystemSignature<WaveletVisualizationSystem>(signature);
     }
-
+    // WaveletVisualizationSystem の登録と使用
 
     // カメラの初期設定
     ECS::Entity cameraEntity = coordinator.createEntity();
@@ -415,6 +433,7 @@ int main(int argc, char* argv[]) {
 
         // RenderSystem の描画を行う
         renderSystem->update(deltaTime); // 描画を行う
+        waveletVisSystem->update(deltaTime);
 
         // GUIの描画
         guiManager.render();

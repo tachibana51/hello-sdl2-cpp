@@ -106,51 +106,6 @@ public:
             renderCoordinateLabel(position, screenX, screenY);
         }
 
-
-        // WaveletVisualizationComponent を持つエンティティの描画
-        for (auto const& entity : entities) {
-            if (!coordinator->hasComponent<WaveletVisualizationComponent>(entity))
-                continue;
-
-            const auto& waveletVis = coordinator->getComponent<WaveletVisualizationComponent>(entity);
-            for (size_t i = 0; i < waveletVis.points.size(); ++i) {
-                const glm::vec3& point = waveletVis.points[i];
-                const glm::vec4& color = waveletVis.colors[i];
-
-                // ワールド座標からクリップ空間へ
-                glm::vec4 clipSpacePos = projection * view * glm::vec4(point, 1.0f);
-
-                // NDCに変換
-                if (clipSpacePos.w == 0.0f) continue;
-                glm::vec3 ndc = glm::vec3(clipSpacePos) / clipSpacePos.w;
-
-                // スクリーン座標に変換
-                int screenX = static_cast<int>((ndc.x + 1.0f) * 0.5f * windowWidth);
-                int screenY = static_cast<int>((1.0f - ndc.y) * 0.5f * windowHeight); // Y軸反転
-
-                // 視野外の点を描画しない
-                if (ndc.x < -1.0f || ndc.x > 1.0f || ndc.y < -1.0f || ndc.y > 1.0f || ndc.z < -1.0f || ndc.z > 1.0f)
-                    continue;
-
-                // スクリーン座標がウィンドウ内か確認
-                if (screenX < 0 || screenX >= windowWidth || screenY < 0 || screenY >= windowHeight)
-                    continue;
-
-                // 色の設定
-                SDL_SetRenderDrawColor(renderer,
-                                       static_cast<Uint8>(color.r * 255),
-                                       static_cast<Uint8>(color.g * 255),
-                                       static_cast<Uint8>(color.b * 255),
-                                       static_cast<Uint8>(color.a * 255));
-
-                // 点を描画
-                SDL_RenderDrawPoint(renderer, screenX, screenY);
-
-                // 座標ラベルの描画
-                renderCoordinateLabel(point, screenX, screenY);
-            }
-        }
-
         SDL_Log("RenderSystem: Drawable Entities = %d", drawableEntities);
 
         // 座標軸の描画
