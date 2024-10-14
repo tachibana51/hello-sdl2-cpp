@@ -129,77 +129,149 @@ PointCloudApp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/build
 .PHONY : PointCloudApp/fast
 
-src/drawPointCloud.o: src/drawPointCloud.cpp.o
-.PHONY : src/drawPointCloud.o
+src/GUI/Button.o: src/GUI/Button.cpp.o
+.PHONY : src/GUI/Button.o
 
 # target to build an object file
-src/drawPointCloud.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.o
-.PHONY : src/drawPointCloud.cpp.o
+src/GUI/Button.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.o
+.PHONY : src/GUI/Button.cpp.o
 
-src/drawPointCloud.i: src/drawPointCloud.cpp.i
-.PHONY : src/drawPointCloud.i
+src/GUI/Button.i: src/GUI/Button.cpp.i
+.PHONY : src/GUI/Button.i
 
 # target to preprocess a source file
-src/drawPointCloud.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.i
-.PHONY : src/drawPointCloud.cpp.i
+src/GUI/Button.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.i
+.PHONY : src/GUI/Button.cpp.i
 
-src/drawPointCloud.s: src/drawPointCloud.cpp.s
-.PHONY : src/drawPointCloud.s
+src/GUI/Button.s: src/GUI/Button.cpp.s
+.PHONY : src/GUI/Button.s
 
 # target to generate assembly for a file
-src/drawPointCloud.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.s
-.PHONY : src/drawPointCloud.cpp.s
+src/GUI/Button.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.s
+.PHONY : src/GUI/Button.cpp.s
 
-src/generatePointCloud.o: src/generatePointCloud.cpp.o
-.PHONY : src/generatePointCloud.o
+src/GUI/GUIManager.o: src/GUI/GUIManager.cpp.o
+.PHONY : src/GUI/GUIManager.o
 
 # target to build an object file
-src/generatePointCloud.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.o
-.PHONY : src/generatePointCloud.cpp.o
+src/GUI/GUIManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.o
+.PHONY : src/GUI/GUIManager.cpp.o
 
-src/generatePointCloud.i: src/generatePointCloud.cpp.i
-.PHONY : src/generatePointCloud.i
+src/GUI/GUIManager.i: src/GUI/GUIManager.cpp.i
+.PHONY : src/GUI/GUIManager.i
 
 # target to preprocess a source file
-src/generatePointCloud.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.i
-.PHONY : src/generatePointCloud.cpp.i
+src/GUI/GUIManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.i
+.PHONY : src/GUI/GUIManager.cpp.i
 
-src/generatePointCloud.s: src/generatePointCloud.cpp.s
-.PHONY : src/generatePointCloud.s
+src/GUI/GUIManager.s: src/GUI/GUIManager.cpp.s
+.PHONY : src/GUI/GUIManager.s
 
 # target to generate assembly for a file
-src/generatePointCloud.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.s
-.PHONY : src/generatePointCloud.cpp.s
+src/GUI/GUIManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.s
+.PHONY : src/GUI/GUIManager.cpp.s
 
-src/handleCameraMovement.o: src/handleCameraMovement.cpp.o
-.PHONY : src/handleCameraMovement.o
+src/Systems/CameraSystem.o: src/Systems/CameraSystem.cpp.o
+.PHONY : src/Systems/CameraSystem.o
 
 # target to build an object file
-src/handleCameraMovement.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.o
-.PHONY : src/handleCameraMovement.cpp.o
+src/Systems/CameraSystem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.o
+.PHONY : src/Systems/CameraSystem.cpp.o
 
-src/handleCameraMovement.i: src/handleCameraMovement.cpp.i
-.PHONY : src/handleCameraMovement.i
+src/Systems/CameraSystem.i: src/Systems/CameraSystem.cpp.i
+.PHONY : src/Systems/CameraSystem.i
 
 # target to preprocess a source file
-src/handleCameraMovement.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.i
-.PHONY : src/handleCameraMovement.cpp.i
+src/Systems/CameraSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.i
+.PHONY : src/Systems/CameraSystem.cpp.i
 
-src/handleCameraMovement.s: src/handleCameraMovement.cpp.s
-.PHONY : src/handleCameraMovement.s
+src/Systems/CameraSystem.s: src/Systems/CameraSystem.cpp.s
+.PHONY : src/Systems/CameraSystem.s
 
 # target to generate assembly for a file
-src/handleCameraMovement.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.s
-.PHONY : src/handleCameraMovement.cpp.s
+src/Systems/CameraSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.s
+.PHONY : src/Systems/CameraSystem.cpp.s
+
+src/Systems/MorphingSystem.o: src/Systems/MorphingSystem.cpp.o
+.PHONY : src/Systems/MorphingSystem.o
+
+# target to build an object file
+src/Systems/MorphingSystem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.o
+.PHONY : src/Systems/MorphingSystem.cpp.o
+
+src/Systems/MorphingSystem.i: src/Systems/MorphingSystem.cpp.i
+.PHONY : src/Systems/MorphingSystem.i
+
+# target to preprocess a source file
+src/Systems/MorphingSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.i
+.PHONY : src/Systems/MorphingSystem.cpp.i
+
+src/Systems/MorphingSystem.s: src/Systems/MorphingSystem.cpp.s
+.PHONY : src/Systems/MorphingSystem.s
+
+# target to generate assembly for a file
+src/Systems/MorphingSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.s
+.PHONY : src/Systems/MorphingSystem.cpp.s
+
+src/Systems/MovementSystem.o: src/Systems/MovementSystem.cpp.o
+.PHONY : src/Systems/MovementSystem.o
+
+# target to build an object file
+src/Systems/MovementSystem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.o
+.PHONY : src/Systems/MovementSystem.cpp.o
+
+src/Systems/MovementSystem.i: src/Systems/MovementSystem.cpp.i
+.PHONY : src/Systems/MovementSystem.i
+
+# target to preprocess a source file
+src/Systems/MovementSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.i
+.PHONY : src/Systems/MovementSystem.cpp.i
+
+src/Systems/MovementSystem.s: src/Systems/MovementSystem.cpp.s
+.PHONY : src/Systems/MovementSystem.s
+
+# target to generate assembly for a file
+src/Systems/MovementSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.s
+.PHONY : src/Systems/MovementSystem.cpp.s
+
+src/Systems/RenderSystem.o: src/Systems/RenderSystem.cpp.o
+.PHONY : src/Systems/RenderSystem.o
+
+# target to build an object file
+src/Systems/RenderSystem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.o
+.PHONY : src/Systems/RenderSystem.cpp.o
+
+src/Systems/RenderSystem.i: src/Systems/RenderSystem.cpp.i
+.PHONY : src/Systems/RenderSystem.i
+
+# target to preprocess a source file
+src/Systems/RenderSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.i
+.PHONY : src/Systems/RenderSystem.cpp.i
+
+src/Systems/RenderSystem.s: src/Systems/RenderSystem.cpp.s
+.PHONY : src/Systems/RenderSystem.s
+
+# target to generate assembly for a file
+src/Systems/RenderSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.s
+.PHONY : src/Systems/RenderSystem.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -225,150 +297,6 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/morphTransition.o: src/morphTransition.cpp.o
-.PHONY : src/morphTransition.o
-
-# target to build an object file
-src/morphTransition.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.o
-.PHONY : src/morphTransition.cpp.o
-
-src/morphTransition.i: src/morphTransition.cpp.i
-.PHONY : src/morphTransition.i
-
-# target to preprocess a source file
-src/morphTransition.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.i
-.PHONY : src/morphTransition.cpp.i
-
-src/morphTransition.s: src/morphTransition.cpp.s
-.PHONY : src/morphTransition.s
-
-# target to generate assembly for a file
-src/morphTransition.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.s
-.PHONY : src/morphTransition.cpp.s
-
-src/onButtonPress.o: src/onButtonPress.cpp.o
-.PHONY : src/onButtonPress.o
-
-# target to build an object file
-src/onButtonPress.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.o
-.PHONY : src/onButtonPress.cpp.o
-
-src/onButtonPress.i: src/onButtonPress.cpp.i
-.PHONY : src/onButtonPress.i
-
-# target to preprocess a source file
-src/onButtonPress.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.i
-.PHONY : src/onButtonPress.cpp.i
-
-src/onButtonPress.s: src/onButtonPress.cpp.s
-.PHONY : src/onButtonPress.s
-
-# target to generate assembly for a file
-src/onButtonPress.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.s
-.PHONY : src/onButtonPress.cpp.s
-
-src/onMouseMovement.o: src/onMouseMovement.cpp.o
-.PHONY : src/onMouseMovement.o
-
-# target to build an object file
-src/onMouseMovement.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.o
-.PHONY : src/onMouseMovement.cpp.o
-
-src/onMouseMovement.i: src/onMouseMovement.cpp.i
-.PHONY : src/onMouseMovement.i
-
-# target to preprocess a source file
-src/onMouseMovement.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.i
-.PHONY : src/onMouseMovement.cpp.i
-
-src/onMouseMovement.s: src/onMouseMovement.cpp.s
-.PHONY : src/onMouseMovement.s
-
-# target to generate assembly for a file
-src/onMouseMovement.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.s
-.PHONY : src/onMouseMovement.cpp.s
-
-src/renderScene.o: src/renderScene.cpp.o
-.PHONY : src/renderScene.o
-
-# target to build an object file
-src/renderScene.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.o
-.PHONY : src/renderScene.cpp.o
-
-src/renderScene.i: src/renderScene.cpp.i
-.PHONY : src/renderScene.i
-
-# target to preprocess a source file
-src/renderScene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.i
-.PHONY : src/renderScene.cpp.i
-
-src/renderScene.s: src/renderScene.cpp.s
-.PHONY : src/renderScene.s
-
-# target to generate assembly for a file
-src/renderScene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.s
-.PHONY : src/renderScene.cpp.s
-
-src/switchCoordinateSystem.o: src/switchCoordinateSystem.cpp.o
-.PHONY : src/switchCoordinateSystem.o
-
-# target to build an object file
-src/switchCoordinateSystem.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.o
-.PHONY : src/switchCoordinateSystem.cpp.o
-
-src/switchCoordinateSystem.i: src/switchCoordinateSystem.cpp.i
-.PHONY : src/switchCoordinateSystem.i
-
-# target to preprocess a source file
-src/switchCoordinateSystem.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.i
-.PHONY : src/switchCoordinateSystem.cpp.i
-
-src/switchCoordinateSystem.s: src/switchCoordinateSystem.cpp.s
-.PHONY : src/switchCoordinateSystem.s
-
-# target to generate assembly for a file
-src/switchCoordinateSystem.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.s
-.PHONY : src/switchCoordinateSystem.cpp.s
-
-src/updatePositions.o: src/updatePositions.cpp.o
-.PHONY : src/updatePositions.o
-
-# target to build an object file
-src/updatePositions.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.o
-.PHONY : src/updatePositions.cpp.o
-
-src/updatePositions.i: src/updatePositions.cpp.i
-.PHONY : src/updatePositions.i
-
-# target to preprocess a source file
-src/updatePositions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.i
-.PHONY : src/updatePositions.cpp.i
-
-src/updatePositions.s: src/updatePositions.cpp.s
-.PHONY : src/updatePositions.s
-
-# target to generate assembly for a file
-src/updatePositions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PointCloudApp.dir/build.make CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.s
-.PHONY : src/updatePositions.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -378,36 +306,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... PointCloudApp"
-	@echo "... src/drawPointCloud.o"
-	@echo "... src/drawPointCloud.i"
-	@echo "... src/drawPointCloud.s"
-	@echo "... src/generatePointCloud.o"
-	@echo "... src/generatePointCloud.i"
-	@echo "... src/generatePointCloud.s"
-	@echo "... src/handleCameraMovement.o"
-	@echo "... src/handleCameraMovement.i"
-	@echo "... src/handleCameraMovement.s"
+	@echo "... src/GUI/Button.o"
+	@echo "... src/GUI/Button.i"
+	@echo "... src/GUI/Button.s"
+	@echo "... src/GUI/GUIManager.o"
+	@echo "... src/GUI/GUIManager.i"
+	@echo "... src/GUI/GUIManager.s"
+	@echo "... src/Systems/CameraSystem.o"
+	@echo "... src/Systems/CameraSystem.i"
+	@echo "... src/Systems/CameraSystem.s"
+	@echo "... src/Systems/MorphingSystem.o"
+	@echo "... src/Systems/MorphingSystem.i"
+	@echo "... src/Systems/MorphingSystem.s"
+	@echo "... src/Systems/MovementSystem.o"
+	@echo "... src/Systems/MovementSystem.i"
+	@echo "... src/Systems/MovementSystem.s"
+	@echo "... src/Systems/RenderSystem.o"
+	@echo "... src/Systems/RenderSystem.i"
+	@echo "... src/Systems/RenderSystem.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/morphTransition.o"
-	@echo "... src/morphTransition.i"
-	@echo "... src/morphTransition.s"
-	@echo "... src/onButtonPress.o"
-	@echo "... src/onButtonPress.i"
-	@echo "... src/onButtonPress.s"
-	@echo "... src/onMouseMovement.o"
-	@echo "... src/onMouseMovement.i"
-	@echo "... src/onMouseMovement.s"
-	@echo "... src/renderScene.o"
-	@echo "... src/renderScene.i"
-	@echo "... src/renderScene.s"
-	@echo "... src/switchCoordinateSystem.o"
-	@echo "... src/switchCoordinateSystem.i"
-	@echo "... src/switchCoordinateSystem.s"
-	@echo "... src/updatePositions.o"
-	@echo "... src/updatePositions.i"
-	@echo "... src/updatePositions.s"
 .PHONY : help
 
 

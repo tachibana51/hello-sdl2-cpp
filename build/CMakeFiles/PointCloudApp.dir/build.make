@@ -83,161 +83,113 @@ CMakeFiles/PointCloudApp.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/main.cpp -o CMakeFiles/PointCloudApp.dir/src/main.cpp.s
 
-CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
-CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.o: /home/akane/work/sdltest/src/generatePointCloud.cpp
-CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.o -c /home/akane/work/sdltest/src/generatePointCloud.cpp
+CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
+CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.o: /home/akane/work/sdltest/src/Systems/MovementSystem.cpp
+CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.o -c /home/akane/work/sdltest/src/Systems/MovementSystem.cpp
 
-CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/generatePointCloud.cpp > CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.i
+CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/Systems/MovementSystem.cpp > CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.i
 
-CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/generatePointCloud.cpp -o CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.s
+CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/Systems/MovementSystem.cpp -o CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.s
 
-CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
-CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.o: /home/akane/work/sdltest/src/updatePositions.cpp
-CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.o -c /home/akane/work/sdltest/src/updatePositions.cpp
+CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
+CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.o: /home/akane/work/sdltest/src/Systems/RenderSystem.cpp
+CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.o -c /home/akane/work/sdltest/src/Systems/RenderSystem.cpp
 
-CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/updatePositions.cpp > CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.i
+CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/Systems/RenderSystem.cpp > CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.i
 
-CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/updatePositions.cpp -o CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.s
+CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/Systems/RenderSystem.cpp -o CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.s
 
-CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
-CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.o: /home/akane/work/sdltest/src/drawPointCloud.cpp
-CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.o -c /home/akane/work/sdltest/src/drawPointCloud.cpp
+CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
+CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.o: /home/akane/work/sdltest/src/Systems/MorphingSystem.cpp
+CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.o -c /home/akane/work/sdltest/src/Systems/MorphingSystem.cpp
 
-CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/drawPointCloud.cpp > CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.i
+CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/Systems/MorphingSystem.cpp > CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.i
 
-CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/drawPointCloud.cpp -o CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.s
+CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/Systems/MorphingSystem.cpp -o CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.s
 
-CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
-CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.o: /home/akane/work/sdltest/src/switchCoordinateSystem.cpp
-CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.o -c /home/akane/work/sdltest/src/switchCoordinateSystem.cpp
+CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
+CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.o: /home/akane/work/sdltest/src/Systems/CameraSystem.cpp
+CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.o -c /home/akane/work/sdltest/src/Systems/CameraSystem.cpp
 
-CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/switchCoordinateSystem.cpp > CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.i
+CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/Systems/CameraSystem.cpp > CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.i
 
-CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/switchCoordinateSystem.cpp -o CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.s
+CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/Systems/CameraSystem.cpp -o CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.s
 
-CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
-CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.o: /home/akane/work/sdltest/src/morphTransition.cpp
-CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.o -c /home/akane/work/sdltest/src/morphTransition.cpp
+CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
+CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.o: /home/akane/work/sdltest/src/GUI/Button.cpp
+CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.o -c /home/akane/work/sdltest/src/GUI/Button.cpp
 
-CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/morphTransition.cpp > CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.i
+CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/GUI/Button.cpp > CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.i
 
-CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/morphTransition.cpp -o CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.s
+CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/GUI/Button.cpp -o CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.s
 
-CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
-CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.o: /home/akane/work/sdltest/src/handleCameraMovement.cpp
-CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.o -c /home/akane/work/sdltest/src/handleCameraMovement.cpp
+CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
+CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.o: /home/akane/work/sdltest/src/GUI/GUIManager.cpp
+CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.o -c /home/akane/work/sdltest/src/GUI/GUIManager.cpp
 
-CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/handleCameraMovement.cpp > CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.i
+CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/GUI/GUIManager.cpp > CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.i
 
-CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/handleCameraMovement.cpp -o CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.s
-
-CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
-CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.o: /home/akane/work/sdltest/src/renderScene.cpp
-CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.o -c /home/akane/work/sdltest/src/renderScene.cpp
-
-CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/renderScene.cpp > CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.i
-
-CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/renderScene.cpp -o CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.s
-
-CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
-CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.o: /home/akane/work/sdltest/src/onButtonPress.cpp
-CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.o -c /home/akane/work/sdltest/src/onButtonPress.cpp
-
-CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/onButtonPress.cpp > CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.i
-
-CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/onButtonPress.cpp -o CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.s
-
-CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.o: CMakeFiles/PointCloudApp.dir/flags.make
-CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.o: /home/akane/work/sdltest/src/onMouseMovement.cpp
-CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.o: CMakeFiles/PointCloudApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.o -MF CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.o.d -o CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.o -c /home/akane/work/sdltest/src/onMouseMovement.cpp
-
-CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/akane/work/sdltest/src/onMouseMovement.cpp > CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.i
-
-CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/onMouseMovement.cpp -o CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.s
+CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/akane/work/sdltest/src/GUI/GUIManager.cpp -o CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.s
 
 # Object files for target PointCloudApp
 PointCloudApp_OBJECTS = \
 "CMakeFiles/PointCloudApp.dir/src/main.cpp.o" \
-"CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.o" \
-"CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.o" \
-"CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.o" \
-"CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.o" \
-"CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.o" \
-"CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.o" \
-"CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.o" \
-"CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.o" \
-"CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.o"
+"CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.o" \
+"CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.o" \
+"CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.o" \
+"CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.o" \
+"CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.o" \
+"CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.o"
 
 # External object files for target PointCloudApp
 PointCloudApp_EXTERNAL_OBJECTS =
 
 PointCloudApp: CMakeFiles/PointCloudApp.dir/src/main.cpp.o
-PointCloudApp: CMakeFiles/PointCloudApp.dir/src/generatePointCloud.cpp.o
-PointCloudApp: CMakeFiles/PointCloudApp.dir/src/updatePositions.cpp.o
-PointCloudApp: CMakeFiles/PointCloudApp.dir/src/drawPointCloud.cpp.o
-PointCloudApp: CMakeFiles/PointCloudApp.dir/src/switchCoordinateSystem.cpp.o
-PointCloudApp: CMakeFiles/PointCloudApp.dir/src/morphTransition.cpp.o
-PointCloudApp: CMakeFiles/PointCloudApp.dir/src/handleCameraMovement.cpp.o
-PointCloudApp: CMakeFiles/PointCloudApp.dir/src/renderScene.cpp.o
-PointCloudApp: CMakeFiles/PointCloudApp.dir/src/onButtonPress.cpp.o
-PointCloudApp: CMakeFiles/PointCloudApp.dir/src/onMouseMovement.cpp.o
+PointCloudApp: CMakeFiles/PointCloudApp.dir/src/Systems/MovementSystem.cpp.o
+PointCloudApp: CMakeFiles/PointCloudApp.dir/src/Systems/RenderSystem.cpp.o
+PointCloudApp: CMakeFiles/PointCloudApp.dir/src/Systems/MorphingSystem.cpp.o
+PointCloudApp: CMakeFiles/PointCloudApp.dir/src/Systems/CameraSystem.cpp.o
+PointCloudApp: CMakeFiles/PointCloudApp.dir/src/GUI/Button.cpp.o
+PointCloudApp: CMakeFiles/PointCloudApp.dir/src/GUI/GUIManager.cpp.o
 PointCloudApp: CMakeFiles/PointCloudApp.dir/build.make
 PointCloudApp: CMakeFiles/PointCloudApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable PointCloudApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/akane/work/sdltest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable PointCloudApp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PointCloudApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
