@@ -1,6 +1,6 @@
 # hello-sdl2-cpp
-
-
+SDL2で3Dプログラミング  
+全く完成していないが動く。やろうと思えば色々出来るという段階。  
 
 https://github.com/user-attachments/assets/17b3b332-08c5-4a65-b70b-195c9458b12a
 
