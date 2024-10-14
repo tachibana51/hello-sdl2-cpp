@@ -512,6 +512,7 @@ CMakeFiles/PointCloudApp.dir/src/main.cpp.o: \
  /home/akane/work/sdltest/src/Systems/../Components/VelocityComponent.h \
  /home/akane/work/sdltest/src/Systems/RenderSystem.h \
  /home/akane/work/sdltest/src/Systems/../Components/MorphingComponent.h \
+ /home/akane/work/sdltest/src/Systems/../Components/WaveletVisualizationComponent.h \
  /home/akane/work/sdltest/src/Systems/CameraSystem.h \
  /home/akane/work/sdltest/src/Systems/../Components/CameraComponent.h \
  /home/akane/work/sdltest/src/Systems/../Components/ProjectionComponent.h \
@@ -524,4 +525,5 @@ CMakeFiles/PointCloudApp.dir/src/main.cpp.o: \
  /home/akane/work/sdltest/src/Systems/AudioSystem.h \
  /home/akane/work/sdltest/src/Systems/../Components/AudioComponent.h \
  /usr/include/sndfile.h \
- /home/akane/work/sdltest/src/Systems/WaveletSystem.h
+ /home/akane/work/sdltest/src/Systems/WaveletSystem.h \
+ /home/akane/work/sdltest/src/Systems/WaveletVisualizationSystem.h

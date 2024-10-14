@@ -34,11 +34,11 @@ public:
         const auto& audio = coordinator->getComponent<AudioComponent>(entity);
         std::vector<float> data = audio.samples; // サンプルデータをコピー
 
-        int originalLength = data.size();
         int scale = maxScale;
 
         // ウェーブレット変換係数の格納
-        std::vector<std::vector<float>> coefficients;
+        std::vector<std::vector<float>> detailCoefficients;
+        std::vector<std::vector<float>> approxCoefficients;
 
         for (int s = 0; s < scale; ++s) {
             int currentLength = data.size();
@@ -54,18 +54,20 @@ public:
                 detail.push_back(diff);
             }
 
-            coefficients.push_back(detail); // 詳細係数を保存
+            approxCoefficients.push_back(approx);
+            detailCoefficients.push_back(detail);
 
             data = approx; // 近似係数を次のスケールの入力に
         }
 
         // WaveletComponent をエンティティに追加
         coordinator->addComponent<WaveletComponent>(entity, WaveletComponent{
-            std::move(coefficients),
-            maxScale
+            std::move(detailCoefficients),
+            std::move(approxCoefficients),
+            scale
         });
 
-        SDL_Log("Wavelet transform performed on entity %d with %d scales.", entity, maxScale);
+        SDL_Log("Wavelet transform performed on entity %d with %d scales.", entity, scale);
     }
 
     // シンプルな逆 Haar ウェーブレット変換
@@ -82,35 +84,33 @@ public:
 
         const auto& wavelet = coordinator->getComponent<WaveletComponent>(entity);
 
-        std::vector<float> data;
-
-        // 逆ウェーブレット変換
+        // 逆変換のために近似係数と詳細係数を使用
+        std::vector<float> approx = wavelet.approxCoefficients[wavelet.scaleCount - 1];
         for (int s = wavelet.scaleCount - 1; s >= 0; --s) {
-            const auto& detail = wavelet.coefficients[s];
-            std::vector<float> approx;
+            const auto& detail = wavelet.detailCoefficients[s];
+            std::vector<float> reconstructed;
 
-            // 近似係数の初期化（スケールごとに適宜調整）
-            if (data.empty()) {
-                // 最後のスケールの近似係数を仮定
-                // 実際には WaveletComponent に近似係数も保持する必要があります
-                // ここではシンプルな例として詳細係数のみを使用
-                continue;
+            for (size_t i = 0; i < approx.size(); ++i) {
+                float avg = approx[i];
+                float diff = detail[i];
+                float a = avg + diff;
+                float b = avg - diff;
+                reconstructed.push_back(a);
+                reconstructed.push_back(b);
             }
 
-            // 逆変換処理（ここでは詳細係数のみを使用して再構成）
-            // 実際の実装では、近似係数も保持している必要があります
-
-            // 省略: 詳細係数と近似係数を組み合わせて再構成
+            approx = reconstructed;
         }
 
         // AudioComponent のサンプルデータを更新
-        // 実装には近似係数も保持する必要があるため、ここでは簡略化
-        // 実際の用途に合わせて適切に実装してください
+        auto& audio = coordinator->getComponent<AudioComponent>(entity);
+        audio.samples = approx;
+
+        SDL_Log("Inverse wavelet transform performed on entity %d.", entity);
     }
 
     void update(float deltaTime)  {
         // 現在の実装では自動的にウェーブレット変換を行わない
-        // 必要に応じて、エンティティの状態に応じて処理を行うように拡張可能
     }
 
 private:

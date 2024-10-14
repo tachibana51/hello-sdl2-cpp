@@ -18,10 +18,12 @@
 #include "Components/CameraComponent.h"
 #include "Components/ProjectionComponent.h"
 #include "Components/WaveletComponent.h"
+#include "Components/WaveletVisualizationComponent.h"
 #include "GUI/GUIManager.h"
 #include "GUI/Button.h"
 #include "Systems/AudioSystem.h"
 #include "Systems/WaveletSystem.h"
+#include "Systems/WaveletVisualizationSystem.h"
 
 // 座標系の種類を定義
 enum class CoordinateSystemType {
@@ -213,6 +215,7 @@ int main(int argc, char* argv[]) {
     coordinator.registerComponent<ProjectionComponent>();  // ProjectionComponent の登録
     coordinator.registerComponent<AudioComponent>();
     coordinator.registerComponent<WaveletComponent>();
+    coordinator.registerComponent<WaveletVisualizationComponent>();
 
     // システムの登録
     auto movementSystem = coordinator.registerSystem<MovementSystem>();
@@ -278,6 +281,16 @@ int main(int argc, char* argv[]) {
         signature.set(coordinator.getComponentType<WaveletComponent>(), true);
         waveletSystem->setCoordinator(&coordinator);
         coordinator.setSystemSignature<WaveletSystem>(signature);
+    }
+
+
+    // WaveletVisualizationSystem の登録と使用
+    auto waveletVisSystem = coordinator.registerSystem<WaveletVisualizationSystem>();
+    {
+        ECS::Signature signature;
+        signature.set(coordinator.getComponentType<WaveletVisualizationComponent>(), true);
+        waveletVisSystem->setCoordinator(&coordinator);
+        coordinator.setSystemSignature<WaveletVisualizationSystem>(signature);
     }
 
 

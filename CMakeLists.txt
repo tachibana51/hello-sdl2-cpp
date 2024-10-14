@@ -39,6 +39,7 @@ set(SOURCES
     src/Components/ProjectionComponent.h
     src/Components/AudioComponent.h
     src/Components/WaveletComponent.h
+    src/Components/WaveletVisualizationComponent.h
 )
 
 # Engine/ECS/*.cpp を追加
@@ -64,6 +65,7 @@ set(SYSTEMS_SOURCES
     src/Systems/CameraSystem.cpp
     src/Systems/AudioSystem.h
     src/Systems/WaveletSystem.h
+    src/Systems/WaveletVisualizationSystem.h
 )
 
 # GUI/*.cpp を追加
