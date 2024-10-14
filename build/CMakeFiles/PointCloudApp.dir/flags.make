@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/usr/include/SDL2 -I/home/akane/work/sdltest/src
 
-CXX_FLAGS = -std=gnu++20
+CXX_FLAGS = -g -std=gnu++20
 
