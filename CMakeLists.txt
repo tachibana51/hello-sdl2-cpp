@@ -31,30 +31,30 @@ include_directories(src)
 # ソースファイルの設定
 set(SOURCES
     src/main.cpp
-    src/Components/MorphingComponent.h
-    src/Components/PositionComponent.h
-    src/Components/VelocityComponent.h
-    src/Components/FunctionComponent.h
-    src/Components/CameraComponent.h
-    src/Components/ProjectionComponent.h
-    src/Components/AudioComponent.h
-    src/Components/WaveletComponent.h
-    src/Components/WaveletVisualizationComponent.h
+    src/Components/MorphingComponent.hpp
+    src/Components/PositionComponent.hpp
+    src/Components/VelocityComponent.hpp
+    src/Components/FunctionComponent.hpp
+    src/Components/CameraComponent.hpp
+    src/Components/ProjectionComponent.hpp
+    src/Components/AudioComponent.hpp
+    src/Components/WaveletComponent.hpp
+    src/Components/WaveletVisualizationComponent.hpp
 )
 
 # Engine/ECS/*.cpp を追加
 set(ENGINE_ECS_SOURCES
-    src/Engine/ECS/Coordinator.h
-    src/Engine/ECS/EntityManager.h
-    src/Engine/ECS/ComponentManager.h
-    src/Engine/ECS/SystemManager.h
-    src/Engine/ECS/System.h
+    src/Engine/ECS/Coordinator.hpp
+    src/Engine/ECS/EntityManager.hpp
+    src/Engine/ECS/ComponentManager.hpp
+    src/Engine/ECS/SystemManager.hpp
+    src/Engine/ECS/System.hpp
 )
 
 # Engine/Events/*.cpp を追加
 set(ENGINE_EVENTS_SOURCES
-    src/Engine/Events/Event.h
-    src/Engine/Events/EventManager.h
+    src/Engine/Events/Event.hpp
+    src/Engine/Events/EventManager.hpp
 )
 
 # Systems/*.cpp を追加
@@ -63,9 +63,9 @@ set(SYSTEMS_SOURCES
     src/Systems/RenderSystem.cpp
     src/Systems/MorphingSystem.cpp
     src/Systems/CameraSystem.cpp
-    src/Systems/AudioSystem.h
-    src/Systems/WaveletSystem.h
-    src/Systems/WaveletVisualizationSystem.h
+    src/Systems/AudioSystem.hpp
+    src/Systems/WaveletSystem.hpp
+    src/Systems/WaveletVisualizationSystem.hpp
 )
 
 # GUI/*.cpp を追加

@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include "Event.h"
+#include "Event.hpp"
 #include <queue>
 #include <functional>
 #include <unordered_map>

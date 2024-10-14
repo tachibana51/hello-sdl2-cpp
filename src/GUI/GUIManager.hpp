@@ -2,8 +2,8 @@
 #pragma once
 #include <SDL2/SDL.h>
 #include <vector>
-#include "GUIElement.h"
-#include "../Engine/Events/EventManager.h"
+#include "GUIElement.hpp"
+#include "../Engine/Events/EventManager.hpp"
 
 class GUIManager {
 public:

@@ -1,9 +1,9 @@
 
 #pragma once
 
-#include "EntityManager.h"
-#include "ComponentManager.h"
-#include "SystemManager.h"
+#include "EntityManager.hpp"
+#include "ComponentManager.hpp"
+#include "SystemManager.hpp"
 
 namespace ECS {
     class Coordinator {

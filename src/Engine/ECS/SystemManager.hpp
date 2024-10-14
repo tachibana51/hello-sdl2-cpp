@@ -1,8 +1,8 @@
 
 #pragma once
 
-#include "System.h"
-#include "Types.h"
+#include "System.hpp"
+#include "Types.hpp"
 #include <memory>
 #include <unordered_map>
 #include <typeindex>

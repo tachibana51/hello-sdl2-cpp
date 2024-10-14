@@ -1,5 +1,5 @@
 
-#include "GUIManager.h"
+#include "GUIManager.hpp"
 
 GUIManager::GUIManager(SDL_Renderer* renderer, EventManager& eventManager)
     : renderer(renderer), eventManager(eventManager) {}
