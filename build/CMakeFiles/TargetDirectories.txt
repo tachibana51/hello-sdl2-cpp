@@ -1,3 +1,0 @@
-/home/akane/work/sdltest/build/CMakeFiles/PointCloudApp.dir
-/home/akane/work/sdltest/build/CMakeFiles/edit_cache.dir
-/home/akane/work/sdltest/build/CMakeFiles/rebuild_cache.dir

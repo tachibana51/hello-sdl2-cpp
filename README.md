@@ -1,4 +1,11 @@
 # hello-sdl2-cpp
+
+```sh
+mkdir build
+cd build
+cmake ..
+make
+```
 sphere wolrd
 TODO:
 - [ ] シグナルハンドラを付けて毎回core dumpはくのをやめさせる
