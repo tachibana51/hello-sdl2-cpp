@@ -1,4 +1,3 @@
-
 #pragma once
 
 #include "../Engine/ECS/System.h"
@@ -19,7 +18,7 @@ public:
           dragging(false),
           lastMouseX(0),
           lastMouseY(0),
-          cameraRadius(20.0f) // 半径の初期値
+          cameraRadius(20.0f) // 初期半径
     {}
     ~CameraSystem() {}
 
@@ -74,6 +73,35 @@ public:
 
                         SDL_Log("Camera updated: yaw=%.2f, pitch=%.2f, position=(%.2f, %.2f, %.2f)",
                                 camera.yaw, camera.pitch, camera.position.x, camera.position.y, camera.position.z);
+                    }
+                }
+            }
+        }
+        else if (event.type == SDL_MOUSEWHEEL) {
+            // マウスホイールのスクロールによるカメラのズーム
+            // event.wheel.y > 0: scroll up, event.wheel.y < 0: scroll down
+            float zoomSensitivity = 1.0f; // 調整可能
+            float deltaRadius = event.wheel.y * zoomSensitivity;
+            float newRadius = cameraRadius - deltaRadius; // スクロールアップでズームイン（半径を減らす）
+
+            // 最小・最大半径の設定
+            const float minRadius = 5.0f;
+            const float maxRadius = 100.0f;
+
+            // クランプ
+            if (newRadius < minRadius) newRadius = minRadius;
+            if (newRadius > maxRadius) newRadius = maxRadius;
+
+            if (newRadius != cameraRadius) {
+                cameraRadius = newRadius;
+
+                // カメラの位置を再計算（オービットカメラとして）
+                for (auto const& entity : entities) {
+                    if (coordinator->hasComponent<CameraComponent>(entity)) {
+                        auto& camera = coordinator->getComponent<CameraComponent>(entity);
+                        updateCameraPosition(camera);
+                        SDL_Log("Camera radius updated: %.2f, new position=(%.2f, %.2f, %.2f)",
+                                cameraRadius, camera.position.x, camera.position.y, camera.position.z);
                     }
                 }
             }

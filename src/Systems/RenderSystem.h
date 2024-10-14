@@ -7,14 +7,22 @@
 #include "../Components/MorphingComponent.h"
 #include "CameraSystem.h" // 完全な定義をインクルード
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <vector>
 
 class RenderSystem : public ECS::System {
 public:
-    RenderSystem() : coordinator(nullptr), renderer(nullptr), windowWidth(800), windowHeight(600), cameraSystem(nullptr) {}
-    ~RenderSystem() {}
+    RenderSystem() : coordinator(nullptr), renderer(nullptr), windowWidth(800), windowHeight(600), cameraSystem(nullptr),
+    font(nullptr)
+    {}
+    ~RenderSystem() {
+        if (font) {
+            TTF_CloseFont(font);
+            font = nullptr;
+        }
+    }
 
     void setCoordinator(ECS::Coordinator* coord) {
         coordinator = coord;
@@ -29,11 +37,20 @@ public:
         windowHeight = height;
     }
 
-    void setCameraSystem(CameraSystem* camSys) { // 修正
+    void setCameraSystem(CameraSystem* camSys) {
         cameraSystem = camSys;
     }
 
-    void update(float deltaTime) { // 'override' を削除
+    bool loadFont(const std::string& fontPath, int fontSize) {
+        font = TTF_OpenFont(fontPath.c_str(), fontSize);
+        if (!font) {
+            SDL_Log("Failed to load font %s: %s", fontPath.c_str(), TTF_GetError());
+            return false;
+        }
+        return true;
+    }
+
+    void update(float deltaTime) {
         if (!renderer || !coordinator || !cameraSystem) {
             SDL_Log("RenderSystem: Missing renderer, coordinator, or cameraSystem.");
             return;
@@ -85,6 +102,7 @@ public:
             if (SDL_RenderFillRect(renderer, &pointRect) != 0) {
                 SDL_Log("SDL_RenderFillRect failed: %s", SDL_GetError());
             }
+            renderCoordinateLabel(position, screenX, screenY);
         }
 
         SDL_Log("RenderSystem: Drawable Entities = %d", drawableEntities);
@@ -99,6 +117,48 @@ private:
     int windowWidth;
     int windowHeight;
     CameraSystem* cameraSystem; // CameraSystem のポインタ
+    TTF_Font* font;
+
+    void renderCoordinateLabel(const glm::vec3& position, int screenX, int screenY) {
+        if (!font) return;
+
+        // テキスト内容を作成
+        std::string text = "(" + std::to_string(position.x) + ", " +
+                            std::to_string(position.y) + ", " +
+                            std::to_string(position.z) + ")";
+
+        // テキストをサーフェスにレンダリング
+        SDL_Color textColor = { 255, 255, 255, 255 }; // 白色
+        SDL_Surface* textSurface = TTF_RenderText_Solid(font, text.c_str(), textColor);
+        if (!textSurface) {
+            SDL_Log("Failed to render text surface: %s", TTF_GetError());
+            return;
+        }
+
+        // サーフェスをテクスチャに変換
+        SDL_Texture* textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
+        if (!textTexture) {
+            SDL_Log("Failed to create text texture: %s", SDL_GetError());
+            SDL_FreeSurface(textSurface);
+            return;
+        }
+
+        // テクスチャのサイズを取得
+        int textWidth = textSurface->w;
+        int textHeight = textSurface->h;
+
+        // テクスチャの描画位置を設定（点の右下に表示）
+        SDL_Rect renderQuad = { screenX + 5, screenY - textHeight - 5, textWidth, textHeight };
+
+        // テクスチャをレンダラーにコピー
+        if (SDL_RenderCopy(renderer, textTexture, NULL, &renderQuad) != 0) {
+            SDL_Log("Failed to render text texture: %s", SDL_GetError());
+        }
+
+        // リソースの解放
+        SDL_DestroyTexture(textTexture);
+        SDL_FreeSurface(textSurface);
+    }
 
     void drawAxes(const glm::mat4& view, const glm::mat4& projection) {
         // X軸（赤）、Y軸（緑）、Z軸（青）

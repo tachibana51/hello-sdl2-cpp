@@ -1,50 +1,59 @@
-
+// src/Systems/MovementSystem.h
 #pragma once
-#include <SDL2/SDL_log.h>
+
 #include "../Engine/ECS/System.h"
 #include "../Engine/ECS/Coordinator.h"
 #include "../Components/PositionComponent.h"
 #include "../Components/VelocityComponent.h"
-#include "../Components/FunctionComponent.h"
-#include "../Components/MorphingComponent.h"
+#include <glm/glm.hpp>
+#include <SDL2/SDL.h>
+#include <vector> // 追加: std::vector を使用するため
 
 class MovementSystem : public ECS::System {
 public:
-// Systems/MorphingSystem.h 内の update メソッドにデバッグログを追加
-  void update(float deltaTime) {
-      for (auto const& entity : entities) {
-        if (!coordinator->hasComponent<MorphingComponent>(entity))
-            continue;
-
-        auto& morph = coordinator->getComponent<MorphingComponent>(entity);
-        morph.elapsed += deltaTime;
-
-        float t = morph.elapsed / morph.duration;
-        if (t >= 1.0f) {
-            t = 1.0f;
-        }
-
-        // 線形補間で位置を更新
-        glm::vec3 newPosition = glm::mix(morph.startPosition, morph.targetPosition, t);
-        coordinator->getComponent<PositionComponent>(entity).position = newPosition;
-
-        // デバッグログ
-        SDL_Log("Entity %d: Morphing t=%.2f, New Position=(%.2f, %.2f, %.2f)",
-                entity, t, newPosition.x, newPosition.y, newPosition.z);
-
-        if (t >= 1.0f) {
-            // Morphing 完了
-            coordinator->removeComponent<MorphingComponent>(entity);
-            SDL_Log("Entity %d: Morphing complete.", entity);
-        }
-      }
-    }
+    MovementSystem() : coordinator(nullptr) {}
+    ~MovementSystem() {}
 
     void setCoordinator(ECS::Coordinator* coord) {
         coordinator = coord;
     }
 
+    void update(float deltaTime) {
+        if (!coordinator) {
+            SDL_Log("MovementSystem: Coordinator is null.");
+            return;
+        }
+
+        // 削除対象のエンティティを収集するリスト
+        std::vector<ECS::Entity> toDelete;
+
+        for (auto const& entity : entities) {
+            if (coordinator->hasComponent<PositionComponent>(entity) &&
+                coordinator->hasComponent<VelocityComponent>(entity)) {
+
+                auto& position = coordinator->getComponent<PositionComponent>(entity).position;
+                auto& velocity = coordinator->getComponent<VelocityComponent>(entity).velocity;
+
+                // 位置を更新
+                position += velocity * deltaTime;
+
+                // 領域外に出たか確認（例: ±10ユニットの立方体）
+                float boundary = 10.0f;
+                if (position.x < -boundary || position.x > boundary ||
+                    position.y < -boundary || position.y > boundary ||
+                    position.z < -boundary || position.z > boundary) {
+                    toDelete.push_back(entity);
+                }
+            }
+        }
+
+        // 削除対象のエンティティを削除
+        for (auto const& entity : toDelete) {
+            coordinator->destroyEntity(entity);
+            SDL_Log("Entity %d deleted for moving out of bounds.", entity);
+        }
+    }
+
 private:
-    float currentTime = 0.0f;
     ECS::Coordinator* coordinator;
 };

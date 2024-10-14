@@ -52,6 +52,21 @@ void setupCamera(ECS::Entity entity) {
 }
 
 
+
+// ランダム速度を割り当てる関数の実装
+void assignRandomVelocities() {
+    for (ECS::Entity entity = 0; entity < ECS::MAX_ENTITIES; ++entity) {
+        if (coordinator.hasComponent<VelocityComponent>(entity)) {
+            auto& velocity = coordinator.getComponent<VelocityComponent>(entity).velocity;
+            velocity = glm::vec3(
+                (static_cast<float>(rand()) / RAND_MAX - 0.5f) * 1.0f, // -0.5 to 0.5
+                (static_cast<float>(rand()) / RAND_MAX - 0.5f) * 1.0f,
+                (static_cast<float>(rand()) / RAND_MAX - 0.5f) * 1.0f
+            );
+        }
+    }
+    SDL_Log("Assigned random velocities to all entities.");
+}
 void switchCoordinateSystemMorph() {
     // ターゲット座標系を決定
     CoordinateSystemType targetCoordinateSystem;
@@ -212,6 +227,19 @@ int main(int argc, char* argv[]) {
         renderSystem->setRenderer(renderer);
         renderSystem->setWindowSize(windowWidth, windowHeight);
         coordinator.setSystemSignature<RenderSystem>(signature);
+                // フォントのロード
+        std::string fontPath = "JetBrainsMonoNL-Regular.ttf"; // フォントファイルのパスを指定
+        int fontSize = 12; // フォントサイズを指定
+        if (!renderSystem->loadFont(fontPath, fontSize)) {
+            SDL_Log("Failed to load font. Exiting.");
+            // 必要に応じてエラーハンドリング（例: アプリケーションを終了）
+            // Clean up and exit
+            SDL_DestroyRenderer(renderer);
+            SDL_DestroyWindow(window);
+            TTF_Quit();
+            SDL_Quit();
+            return -1;
+        }
     }
 
     auto morphingSystem = coordinator.registerSystem<MorphingSystem>(); // MorphingSystem の登録
@@ -267,6 +295,9 @@ int main(int argc, char* argv[]) {
         eventManager.sendEvent(Event{Event::SwitchCoordinateSystem});
     }));
 
+    guiManager.addElement(new Button("Assign Velocities", 280, 10, 150, 30, []() {
+        assignRandomVelocities();
+    }));
     // メインループ
     bool running = true;
     SDL_Event event;
@@ -309,7 +340,6 @@ int main(int argc, char* argv[]) {
         // システムの更新
         movementSystem->update(deltaTime);
         morphingSystem->update(deltaTime);
-        // cameraSystem->update(deltaTime); // この行を削除（CameraSystem に update メソッドがないため）
 
         // イベントの処理
         eventManager.processEvents();
@@ -323,7 +353,7 @@ int main(int argc, char* argv[]) {
 
         // GUIの描画
         guiManager.render();
-
+        cameraSystem->handleMouseEvent(event);
         // レンダリングの表示
         SDL_RenderPresent(renderer);
     }

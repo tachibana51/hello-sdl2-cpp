@@ -1,4 +1,3 @@
-
 #pragma once
 
 #include "../Engine/ECS/System.h"
@@ -7,6 +6,7 @@
 #include "../Components/PositionComponent.h"
 #include <glm/glm.hpp>
 #include <SDL2/SDL.h>
+#include <vector>
 
 class MorphingSystem : public ECS::System {
 public:
@@ -23,6 +23,9 @@ public:
             return;
         }
 
+        std::vector<ECS::Entity> completedEntities;
+
+        // 反復処理中にコレクションを変更しない
         for (auto const& entity : entities) {
             if (coordinator->hasComponent<MorphingComponent>(entity) &&
                 coordinator->hasComponent<PositionComponent>(entity)) {
@@ -41,11 +44,16 @@ public:
                         entity, t, position.x, position.y, position.z);
 
                 if (t >= 1.0f) {
-                    // モーフィング完了後、MorphingComponent を削除
-                    coordinator->removeComponent<MorphingComponent>(entity);
-                    SDL_Log("Morphing complete for entity %d.", entity);
+                    // モーフィングが完了したエンティティをリストに追加
+                    completedEntities.push_back(entity);
                 }
             }
+        }
+
+        // 反復処理後に MorphingComponent を削除
+        for (auto const& entity : completedEntities) {
+            coordinator->removeComponent<MorphingComponent>(entity);
+            SDL_Log("Morphing complete for entity %d.", entity);
         }
     }
 
